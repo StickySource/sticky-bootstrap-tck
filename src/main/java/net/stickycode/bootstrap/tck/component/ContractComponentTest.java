@@ -4,9 +4,12 @@ import static org.assertj.core.api.StrictAssertions.assertThat;
 
 import javax.inject.Inject;
 
+import org.junit.Before;
 import org.junit.Test;
 
-public abstract class AbstractContractComponentTest {
+import net.stickycode.bootstrap.StickyBootstrap;
+
+public class ContractComponentTest {
 
   @Inject
   Hydra concrete;
@@ -38,4 +41,8 @@ public abstract class AbstractContractComponentTest {
     assertThat(concrete).isSameAs(fiveUp);
   }
 
+  @Before
+  public void setup() {
+    StickyBootstrap.crank(this, getClass());
+  }
 }

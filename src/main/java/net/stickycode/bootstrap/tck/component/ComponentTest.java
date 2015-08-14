@@ -4,9 +4,12 @@ import static org.assertj.core.api.StrictAssertions.assertThat;
 
 import javax.inject.Inject;
 
+import org.junit.Before;
 import org.junit.Test;
 
-public abstract class AbstractComponentTest {
+import net.stickycode.bootstrap.StickyBootstrap;
+
+public class ComponentTest {
 
   @Inject
   StandardComponent component;
@@ -35,5 +38,10 @@ public abstract class AbstractComponentTest {
   @Test
   public void componentsScannedAreInjected() {
     assertThat(component).isSameAs(component2);
+  }
+
+  @Before
+  public void setup() {
+    StickyBootstrap.crank(this, getClass());
   }
 }

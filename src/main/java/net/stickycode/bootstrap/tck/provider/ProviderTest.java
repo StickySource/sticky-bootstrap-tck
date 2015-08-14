@@ -5,11 +5,13 @@ import static org.assertj.core.api.StrictAssertions.assertThat;
 import javax.inject.Inject;
 import javax.inject.Provider;
 
+import org.junit.Before;
 import org.junit.Test;
 
+import net.stickycode.bootstrap.StickyBootstrap;
 import net.stickycode.bootstrap.tck.component.StandardComponent;
 
-public abstract class AbstractProviderTest {
+public class ProviderTest {
 
   @Inject
   Provider<StandardComponent> componentProvider;
@@ -20,4 +22,8 @@ public abstract class AbstractProviderTest {
     assertThat(componentProvider.get()).isSameAs(componentProvider.get());
   }
 
+  @Before
+  public void setup() {
+    StickyBootstrap.crank(this, getClass());
+  }
 }

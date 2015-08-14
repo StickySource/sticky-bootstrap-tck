@@ -4,10 +4,13 @@ import static org.assertj.core.api.StrictAssertions.assertThat;
 
 import javax.inject.Inject;
 
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-public abstract class AbstractConfiguredTest {
+import net.stickycode.bootstrap.StickyBootstrap;
+
+public class ConfiguredTest {
 
   @Inject
   AConfiguredTuple tuple;
@@ -23,5 +26,10 @@ public abstract class AbstractConfiguredTest {
   public void verify() {
     assertThat(tuple).isNotSameAs(tupleContract);
     assertThat(tuple).isNotSameAs(tuple2);
+  }
+
+  @Before
+  public void setup() {
+    StickyBootstrap.crank(this, getClass());
   }
 }
