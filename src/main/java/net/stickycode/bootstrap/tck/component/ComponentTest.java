@@ -39,6 +39,9 @@ public class ComponentTest {
   @Inject
   ComponentContainer container;
 
+  @Inject
+  Repository repository;
+
   @Test
   public void implementationAndContractAreTheSameInstance() {
     assertThat(implementation).isSameAs(contract);
@@ -49,6 +52,7 @@ public class ComponentTest {
   public void componentsScannedAreInjected() {
     assertThat(component).isSameAs(component2);
     assertThat(domainBean).isNotSameAs(domainBean2);
+    assertThat(repository).isNotNull();
   }
 
   @Before
