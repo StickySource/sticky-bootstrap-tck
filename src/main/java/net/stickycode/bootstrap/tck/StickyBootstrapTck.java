@@ -19,7 +19,8 @@ import net.stickycode.bootstrap.tck.provider.ProviderTest;
     PluggableTest.class,
     ProviderTest.class,
     ContainerTest.class,
-    ContractTest.class
+    ContractTest.class,
+    WiringTest.class
 })
 @RunWith(Suite.class)
 public class StickyBootstrapTck {
