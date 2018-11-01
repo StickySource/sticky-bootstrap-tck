@@ -1,5 +1,7 @@
 package net.example.elsewhere;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import javax.inject.Inject;
 
 import org.junit.Before;
@@ -20,11 +22,13 @@ public class ContainerTest {
 
   @Test
   public void container() {
-    container.find(ComponentContainer.class);
+    assertThat(container.find(ComponentContainer.class)).isNotNull();
   }
 
   @Test
   public void childInjector() {
-    container.find(OtherBean.class);
+    OtherBean find = container.find(OtherBean.class);
+    assertThat(find).isNotNull();
+    assertThat(find.container).isNotNull();
   }
 }

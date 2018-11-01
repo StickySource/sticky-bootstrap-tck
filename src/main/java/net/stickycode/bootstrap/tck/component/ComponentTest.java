@@ -1,6 +1,6 @@
 package net.stickycode.bootstrap.tck.component;
 
-import static org.assertj.core.api.StrictAssertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import javax.inject.Inject;
 
@@ -50,6 +50,7 @@ public class ComponentTest {
 
   @Test
   public void componentsScannedAreInjected() {
+    assertThat(container).isNotNull();
     assertThat(component).isSameAs(component2);
     assertThat(domainBean).isNotSameAs(domainBean2);
     assertThat(repository).isNotNull();

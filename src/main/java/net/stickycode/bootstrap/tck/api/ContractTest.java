@@ -1,6 +1,6 @@
 package net.stickycode.bootstrap.tck.api;
 
-import static org.assertj.core.api.StrictAssertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import javax.inject.Inject;
 import javax.inject.Provider;
@@ -13,7 +13,6 @@ public class ContractTest {
 
   @Inject
   TestBean bean;
-
 
   @Test
   public void singleton() {

@@ -1,6 +1,6 @@
 package net.stickycode.bootstrap.tck.provider;
 
-import static org.assertj.core.api.StrictAssertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import javax.inject.Inject;
 import javax.inject.Provider;
