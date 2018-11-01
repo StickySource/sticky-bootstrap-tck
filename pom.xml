@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (c) RedEngine Ltd, http://www.redengine.co.nz -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <parent>
     <groupId>net.stickycode.parent</groupId>
     <artifactId>sticky-parent-jar8</artifactId>
@@ -10,7 +10,7 @@
 
   <groupId>net.stickycode.bootstrap</groupId>
   <artifactId>sticky-bootstrap-tck</artifactId>
-  <version>3.1-SNAPSHOT</version>
+  <version>3.1</version>
   <packaging>jar</packaging>
 
   <name>sticky-bootstrap-tck</name>
@@ -22,7 +22,7 @@
   <scm>
     <connection>${git.url}</connection>
     <developerConnection>${git.url}</developerConnection>
-    <tag>HEAD</tag>
+    <tag>sticky-bootstrap-tck-3.1</tag>
   </scm>
 
   <dependencies>
@@ -35,19 +35,19 @@
     <dependency>
       <groupId>net.stickycode.composite</groupId>
       <artifactId>sticky-composite-unittest</artifactId>
-      <version>[4,5)</version>
+      <version>[4.1,5)</version>
     </dependency>
 
     <dependency>
       <groupId>net.stickycode.composite</groupId>
       <artifactId>sticky-composite-logging-deploy</artifactId>
-      <version>[3.1,4)</version>
+      <version>[3.2,4)</version>
     </dependency>
 
     <dependency>
       <groupId>net.stickycode.stereotype</groupId>
       <artifactId>sticky-stereotype-configured</artifactId>
-      <version>[3.1,4)</version>
+      <version>[3.3,4)</version>
     </dependency>
   </dependencies>
 
