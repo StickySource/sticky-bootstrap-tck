@@ -4,7 +4,7 @@
   <parent>
     <groupId>net.stickycode.parent</groupId>
     <artifactId>sticky-parent-jar8</artifactId>
-    <version>1.4</version>
+    <version>3.1</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
@@ -16,12 +16,13 @@
   <name>sticky-bootstrap-tck</name>
   <description>Test kit for sticky bootstrap</description>
   <inceptionYear>2015</inceptionYear>
-  <url>http://www.StickyCode.net/bootstrap/sticky-bootstrap-tck/</url>
+
+  <url>https://stickycode.readthedocs.io/en/latest/bootstrap/index.html</url>
 
   <scm>
-    <connection>scm:svn:http://stickycode.googlecode.com/svn/trunk/net.stickycode.bootstrap/sticky-bootstrap-tck</connection>
-    <developerConnection>scm:svn:https://stickycode.googlecode.com/svn/trunk/net.stickycode.bootstrap/sticky-bootstrap-tck</developerConnection>
-    <url>http://code.google.com/p/stickycode/source/browse/#svn/trunk/net.stickycode.bootstrap/sticky-bootstrap-tck</url>
+    <connection>${git.url}</connection>
+    <developerConnection>${git.url}</developerConnection>
+    <tag>HEAD</tag>
   </scm>
 
   <dependencies>
@@ -36,7 +37,7 @@
       <artifactId>sticky-composite-unittest</artifactId>
       <version>[4,5)</version>
     </dependency>
-    
+
     <dependency>
       <groupId>net.stickycode.composite</groupId>
       <artifactId>sticky-composite-logging-deploy</artifactId>
